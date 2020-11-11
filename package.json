@@ -1,5 +1,5 @@
 {
-  "name": "@redux-offline/redux-offline",
+  "name": "@devhousellc/redux-offline",
   "version": "2.6.0",
   "description": "Redux Offline-First Architecture",
   "main": "lib/index.js",
@@ -33,14 +33,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redux-offline/redux-offline"
+    "url": "git+https://github.com/devhousellc/redux-offline"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/redux-offline/redux-offline/issues"
+    "url": "https://github.com/devhousellc/redux-offline/issues"
   },
-  "homepage": "https://github.com/redux-offline/redux-offline#readme",
+  "homepage": "https://github.com/devhousellc/redux-offline#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
@@ -72,7 +72,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.9.6",
-    "redux-persist": "^4.6.0"
+    "@react-native-community/netinfo": "^5.9.7",
+    "redux-persist": "^6.0.0"
   },
   "peerDependencies": {
     "redux": ">=3"

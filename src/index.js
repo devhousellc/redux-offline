@@ -1,6 +1,7 @@
 // @flow
 /* global $Shape */
 import { applyMiddleware, compose } from 'redux';
+import getStoredStateMigrateV4 from 'redux-persist/lib/integration/getStoredStateMigrateV4';
 import type { Config } from './types';
 import { createOfflineMiddleware } from './middleware';
 import { enhanceReducer } from './updater';
@@ -69,7 +70,11 @@ export const offline = (userConfig: $Shape<Config> = {}) => (
 
   // launch store persistor
   if (config.persist) {
-    config.persist(store, config.persistOptions, config.persistCallback);
+    config.persist(
+      store,
+      getStoredStateMigrateV4(config.persistOptions),
+      config.persistCallback
+    );
   }
 
   // launch network detector
@@ -115,7 +120,11 @@ export const createOffline = (userConfig: $Shape<Config> = {}) => {
 
     // launch store persistor
     if (config.persist) {
-      config.persist(store, config.persistOptions, config.persistCallback);
+      config.persist(
+        store,
+        getStoredStateMigrateV4(config.persistOptions),
+        config.persistCallback
+      );
     }
 
     // launch network detector
