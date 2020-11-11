@@ -92,7 +92,7 @@ export type Config = {
   effect: (effect: any, action: OfflineAction) => Promise<*>,
   retry: (action: OfflineAction, retries: number) => ?number,
   discard: (error: any, action: OfflineAction, retries: number) => boolean,
-  persistOptions: { [x: string]: any, whitelist?: any, blacklist: any },
+  persistOptions: {},
   persistCallback: (callback: any) => any,
   defaultCommit: DefaultAction,
   defaultRollback: DefaultAction,
